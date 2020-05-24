@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    &:focus { 
+        outline: 0;
+    }
+}
+
+body {
+    max-width: 1900px;
+    margin: 0 auto;
+    & > * {
+        padding-left: 8vw;
+        padding-right: 8vw;
+        overflow-x: hidden;
+    }
+}

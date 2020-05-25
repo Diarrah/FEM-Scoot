@@ -1,0 +1,156 @@
+.hero {
+    position: relative;
+    background-image: url(/assets/images/home-hero-desktop.jpg);
+    background-size: cover; // Maybe contain?
+    background-repeat: no-repeat;
+    height: 650px;
+    padding: 140px 20vw;
+
+    & > * { 
+        color: hsl(0, 0%, 100%); 
+        max-width: 500px;
+    }
+
+    h1 {
+        position: relative;
+        right: 100px;
+    }
+
+    p {
+        max-width: 405px;
+        margin: 50px 0;
+    }
+
+    &__pattern {
+        position: absolute;
+
+        &--line {
+            transform: translateX(-20vw) translateY(-150px);
+        }
+
+        &--arrow {
+            transform: translateX(450px) translateY(-150px);
+        }
+
+        &--circles {
+            transform: translateX(1000px) translateY(-80px);
+        }
+    }   
+}
+
+.steps {
+    @include flex-btwn(row);
+    position: relative;
+    margin: 100px 0 200px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $light-gray;
+        width: 70%;
+        height: 10px;
+        left: 0; top: 45px;
+        z-index: -1;
+    }
+
+    .step {
+        width: calc(92% / 3);
+        h4 {
+            margin: 15px 0;
+        }
+    }
+}
+
+.attributes {
+    margin: 100px 0;
+
+    .attribute {
+        @include flex-btwn(row);
+        position: relative;
+        margin-bottom: 75px;
+
+        &::after { // These are the circles for each attribute div
+            content: '';
+            position: absolute;
+            background-image: url(/assets/patterns/circle.svg);
+            background-repeat: no-repeat;
+        }
+
+        .img__container {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        & > * {
+            width: 45%;
+            p {
+                margin: 20px 0;
+            }            
+        }
+
+        &:nth-last-of-type(odd) {
+            @include flex-btwn(row-reverse);
+
+            img {
+                display: block;
+                margin-left: auto;
+                transform: translateX(-50px);
+            }
+
+            &::before { // Arrow
+                content: '';
+                position: absolute;
+                background-image: url(/assets/patterns/left-downward-arrow.svg);
+                background-position: right;
+                background-repeat: no-repeat;
+                top: 0; bottom: 0; left: 0; right: 0;
+                z-index: 2;
+            }
+
+            &::after { // Circle
+                top: 0; bottom: 0; left: 0; right: -420px;
+                background-position: center right;
+            }
+        }
+
+        &:nth-of-type(1) { // Arrow for first(odd) attribute
+            &::before {
+                transform: translateX(205px) translateY(120px);
+            }
+        }
+
+        &:nth-of-type(3) { // Arrow for third(odd) attribute
+            &::before {
+                transform: translateX(550px) translateY(-100px);
+            }
+        }
+
+        &:nth-of-type(2) {
+
+            img {
+                transform: translateX(50px);
+            }
+
+            &::before { // Arrow
+                content: '';
+                position: absolute;
+                background-image: url(/assets/patterns/right-arrow.svg);
+                background-position: top left;
+                background-repeat: no-repeat;
+                top: 0; bottom: 0; left: 0; right: 0;
+                transform: translateX(-205px);
+                z-index: 2;
+            }
+            
+            &::after { // Circle
+                top: 0; bottom: 0; right: 0; left: -420px;
+                background-position: center left;
+            } 
+        }
+
+        &__text {
+            margin: auto 0;
+        }
+    } 
+}

@@ -1,0 +1,124 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+
+    &__links {
+        @include flex-btwn(row);
+        font-family: 'Mono Space', monospace;
+        color: $dim-gray;
+        width: 300px;
+        margin-left: 60px;
+
+        li:hover {
+            color: $yellow;
+        }
+    }
+
+    form {
+        margin-left: auto;
+    }
+
+    &__mobile {
+        display: none;
+        .close {
+            display: none;
+        }
+    }
+}
+
+
+// Yellow buttons
+.btn {
+    background-color: $yellow;
+    position: relative;
+    z-index: 2;
+    color: hsl(0, 0%, 100%);
+    width: 180px;
+    height: 53px;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        border: 2px solid $yellow;
+        color: $yellow;
+    }
+}
+
+// Round pictures
+.round {
+    border-radius: 50%;
+}
+
+
+// Call to action
+.cta {
+    @include flex-btwn(row);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $dark-navy;
+
+    
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(/assets/patterns/semi-circles.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        top: 0; bottom: 0; left: 0; right: -150px;
+    }
+
+    & > * { 
+        display: flex; 
+        color: white;
+    }
+
+    h2 {
+        max-width: 415px;
+    }
+
+    .btn__container {
+        align-items: center;
+        position: relative;
+        z-index: 2;
+
+        form {
+
+            &:nth-of-type(1) { margin-right: 20px }
+
+            button {
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+                &:active {
+                    transform: scale(0.985);
+                }
+            }
+        }
+    }
+}
+
+// Footer 
+.footer {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: hsl(215, 14.3%, 23.3%);
+
+    .socials {
+        @include flex-btwn(row);
+        margin-left: auto;
+        width: 100px;
+
+        a i {
+            font-size: 20px;
+            color: $yellow;
+            transition: .15s;
+            &:hover {
+                color: hsl(0, 0%, 100%);
+            }
+        }
+    }
+}

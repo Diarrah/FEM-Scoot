@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/scss/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Scoot Home</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <img src="/assets/logo.svg" alt="Scoot company logo">
+    <ul class="navbar__links">
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="locations.html">Location</a>
+      </li>
+      <li>
+        <a href="careers.html">Careers</a>
+      </li>
+    </ul>
+    <form action="#cta">
+      <button type="submit" class="btn">Get Scootin</button>
+    </form>
+    <a href="#" class="navbar__mobile">
+      <img src="/assets/icons/hamburger.svg" class="hamburger" alt="Hamburger mobile nav toggle">
+      <img src="/assets/icons/close.svg" class="close" alt="X shape">
+    </a>
+  </nav>
+
+  <div class="hero">
+    <h1>Scooter sharing made simple</h1>
+    <p>
+      Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient 
+      locations in each of our cities. Use our app to locate the nearest bike, unlock 
+      it with a tap, and you’re away!
+    </p>
+    <form action="#cta">
+      <button class="btn">Get Scootin</button>
+    </form>
+    <!--Patterns-->
+    <img src="/assets/patterns/line.svg" alt="Horizontal line" class="hero__pattern hero__pattern--line">
+    <img src="/assets/patterns/right-arrow.svg" alt="Right pointing arrow" class="hero__pattern hero__pattern--arrow">
+    <img src="/assets/patterns/white-circles.svg" alt="3 white circles" class="hero__pattern hero__pattern--circles">
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <img src="/assets/icons/locate.svg" alt="Mobile app usage illustration">
+      <h4>Locate with app</h4>
+      <p>
+        Use the app to find the nearest scooter to you. We are continuously placing scooters 
+        in the areas with most demand, so one should never be too far away.
+      </p>
+    </div>
+    <div class="step">
+      <img src="/assets/icons/scooter.svg" alt="Scooter illustration">
+      <h4>Pick your scooter</h4>
+      <p>
+        We show the most important info for the scooters closest to you. So you know how much 
+        charge they have left and can see roughly how much it will cost.
+      </p>
+    </div>
+    <div class="step">
+      <img src="/assets/icons/ride.svg" alt="Person enjoying Scoot illustration">
+      <h4>Enjoy the ride</h4>
+      <p>
+        Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, 
+        and you’re off! Always lock bikes away from walkways and accessibility ramps.
+      </p>
+    </div>
+  </div>
+
+  <div class="attributes">
+    <div class="attribute">
+      <div class="img__container">
+        <img src="/assets/images/telemetry.jpg" class="round" alt="Woman using Scoot mobile app">
+      </div>
+      <div class="attribute__text">
+        <h3>Easy to use riding telemetry</h3>
+        <p>
+          The Scoot app is available with riding telemetry. This means it can show you your 
+          average speed, how long you've been using the scooter, your traveling distance, 
+          and many more things all in an easy to use app.
+        </p>
+        <form action="about.html">
+          <button type="submit" class="btn">Learn More</button>
+      </form>
+      </div>
+    </div>
+    <div class="attribute">
+      <div class="img__container">
+        <img src="/assets/images/near-you.jpg" class="round" alt="Major city downtown">
+      </div>
+      <div class="attribute__text">
+        <h3>Coming to a city near you</h3>
+        <p>
+          Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure 
+          to let us know if you want to see us in your hometown. We’re aiming to let our 
+          scooters loose on 23 cities over the coming year.
+        </p>
+        <form action="locations.html">
+          <button type="submit" class="btn">Learn More</button>
+        </form>
+      </div>
+    </div>
+    <div class="attribute">
+      <div class="img__container">
+        <img src="/assets/images/payments.jpg" class="round" alt="Person looking through wallet">
+      </div>
+      <div class="attribute__text">
+        <h3>Zero hassle payments</h3>
+        <p>
+          Our payment is as easy as one two three. We accept most credit cards and debit cards. 
+          You can also link your PayPal account inside the app. Need to pay later? No worries! 
+          You can defer payment for up to a month.
+        </p>
+        <form action="about.html">
+          <button type="submit" class="btn">Learn More</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta" id="cta">
+    <h2>Sign up and Scoot off today</h2>
+    <div class="btn__container">
+      <form action="https://www.apple.com/ios/app-store/" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/app-store.svg" alt="Apple app store redirect link">
+        </button>
+      </form>
+      <form action="https://play.google.com/store?&utm_source=na_Med&utm_medium=hasem&utm_content=Jul0119&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-us-1000189-Med-hasem-py-Evergreen-Jul0119-Text_Search_BKWS-id_100740_%7cEXA%7cONSEM_kwid_43700045371544913&gclid=CjwKCAjwtqj2BRBYEiwAqfzur_9fpAcARXigtkcmByDZ9bHxoaw-1VsxHoaywdPUX54GnAkcvZY5nhoCAmAQAvD_BwE&gclsrc=aw.ds" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/google-play.svg" alt="Google play redirect link">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="/assets/logo-white.svg" alt="Scoot company logo">
+    <ul class="footer__links navbar__links">
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="locations.html">Location</a>
+      </li>
+      <li> 
+        <a href="careers.html">Careers</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <a href="#" aria-label="Friend Scoot on Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -14,5 +14,10 @@ body {
         padding-left: 8vw;
         padding-right: 8vw;
         overflow-x: hidden;
+
+        @include rwd(978) {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
     }
 }

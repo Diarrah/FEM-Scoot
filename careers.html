@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Scoot</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="navbar__mobile">
+      <img src="/assets/icons/hamburger.svg" class="hamburger" alt="Hamburger mobile nav toggle">
+      <img src="/assets/icons/close.svg" class="close" alt="X shape">
+    </a>
+    <a href="index.html" class="logo">
+      <img src="/assets/logo.svg" alt="Scoot company logo">
+    </a>
+    <div class="links__container"> <!-- This is the 3 links + the button -->
+      <ul class="navbar__links">
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="locations.html">Location</a>
+        </li>
+        <li>
+          <a href="careers.html">Careers</a>
+        </li>
+      </ul>
+      <button class="btn cta--redirect" onclick="window.location.href='#cta'">Get Scootin</button>
+    </div>
+  </nav>
+
+  <div class="overlay"></div>
+
+  <div class="banner banner--careers">
+    <h2>Careers</h2>
+  </div>
+
+  <div class="attributes">
+    <div class="attribute attribute--careers">
+      <div class="img__container">
+        <img src="/assets/images/join-us.jpg" class="round" alt="Tech lead addressing board room">
+      </div>
+      <div class="attribute__text">
+        <h2>Care to join our mission?</h2>
+        <p>
+          We’re always looking for ambitious individuals to help us on our journey. If you’re 
+          passionate about our mission to provide clean, accessible transport to improve urban 
+          living we want to hear from you!
+        </p>
+        <form>
+          <button class="btn">Say Hello</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="values">
+    <h2>Why join us?</h2>
+    <div class="values__container">
+      <div class="value">
+        <div class="img__container">
+          <img src="/assets/images/our-tech.jpg" class="round" alt="Person using Scoot mobile app">
+          <span class="number">01</span>
+        </div>
+        <div class="value__text">
+          <h4>Our tech</h4>
+          <p>
+            We’re using cutting edge technology to drive accessible urban transportation forward. 
+            Our fully electric scooters are a joy to ride!
+          </p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="img__container">  
+          <img src="/assets/images/our-integrity.jpg" class="round" alt="Person on a vespa">
+          <span class="number">02</span>
+        </div>
+        <div class="value__text">
+          <h4>Our integrity</h4>
+          <p>
+            We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
+            in every city we serve.
+          </p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="img__container">
+          <img src="/assets/images/our-community.jpg" class="round" alt="Group of people walking downtown">
+          <span class="number">03</span>
+        </div>
+        <div class="value__text">
+          <h4>Our community</h4>
+          <p>
+            We support every community we serve. All workers are paid a living wage based on their 
+            location and are Scoot employees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jobs">
+    <div class="job">
+      <div class="job__desc">
+        <h4>General Manager</h4>
+        <p class="location">Jakarta, Indonesia</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+    <div class="job">
+      <div class="job__desc">
+        <h4>UI/UX Designer</h4>
+        <p class="location">Yokohama, Japan</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+    <div class="job">
+      <div class="job__desc">
+        <h4>Blog Content Copywriter</h4>
+        <p class="location">New York, United States</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+    <div class="job">
+      <div class="job__desc">
+        <h4>Graphic Designer</h4>
+        <p class="location">New York, United States</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+    <div class="job">
+      <div class="job__desc">
+        <h4>Fleet Supervisor</h4>
+        <p class="location">Jakarta, Indonesia</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+    <div class="job">
+      <div class="job__desc">
+        <h4>UX Analyst</h4>
+        <p class="location">London, United Kingdom</p>
+      </div>
+      <form>
+        <button class="btn">Apply</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cta" id="cta">
+    <h2>Sign up and Scoot off today</h2>
+    <div class="btn__container">
+      <form action="https://www.apple.com/ios/app-store/" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/app-store.svg" alt="Apple app store redirect link">
+        </button>
+      </form>
+      <form action="https://play.google.com/store?&utm_source=na_Med&utm_medium=hasem&utm_content=Jul0119&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-us-1000189-Med-hasem-py-Evergreen-Jul0119-Text_Search_BKWS-id_100740_%7cEXA%7cONSEM_kwid_43700045371544913&gclid=CjwKCAjwtqj2BRBYEiwAqfzur_9fpAcARXigtkcmByDZ9bHxoaw-1VsxHoaywdPUX54GnAkcvZY5nhoCAmAQAvD_BwE&gclsrc=aw.ds" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/google-play.svg" alt="Google play redirect link">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="/index.html">
+      <img src="/assets/logo-white.svg" alt="Scoot company logo">
+    </a>
+    <ul class="footer__links navbar__links">
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="locations.html">Location</a>
+      </li>
+      <li> 
+        <a href="careers.html">Careers</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <a href="#" aria-label="Friend Scoot on Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

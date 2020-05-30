@@ -1,0 +1,5 @@
+@mixin flex-btwn($prop) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: $prop;
+}

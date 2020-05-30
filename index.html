@@ -4,34 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-  <link rel="stylesheet" href="/styles/scss/main.css">
+  <link rel="stylesheet" href="/styles/css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Scoot Home</title>
 </head>
 
 <body>
-
   <nav class="navbar">
-    <img src="/assets/logo.svg" alt="Scoot company logo">
-    <ul class="navbar__links">
-      <li>
-        <a href="about.html">About</a>
-      </li>
-      <li>
-        <a href="locations.html">Location</a>
-      </li>
-      <li>
-        <a href="careers.html">Careers</a>
-      </li>
-    </ul>
-    <form action="#cta">
-      <button type="submit" class="btn">Get Scootin</button>
-    </form>
     <a href="#" class="navbar__mobile">
       <img src="/assets/icons/hamburger.svg" class="hamburger" alt="Hamburger mobile nav toggle">
       <img src="/assets/icons/close.svg" class="close" alt="X shape">
     </a>
+    <img src="/assets/logo.svg" class="logo" alt="Scoot company logo">
+    <div class="links__container"> <!-- This is the 3 links + the button -->
+      <ul class="navbar__links">
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="locations.html">Location</a>
+        </li>
+        <li>
+          <a href="careers.html">Careers</a>
+        </li>
+      </ul>
+      <button class="btn cta--redirect" onclick="window.location.href='#cta'">Get Scootin</button>
+    </div>
   </nav>
+
+  <div class="overlay"></div>
 
   <div class="hero">
     <h1>Scooter sharing made simple</h1>
@@ -40,44 +41,45 @@
       locations in each of our cities. Use our app to locate the nearest bike, unlock 
       it with a tap, and you’re away!
     </p>
-    <form action="#cta">
-      <button class="btn">Get Scootin</button>
-    </form>
-    <!--Patterns-->
-    <img src="/assets/patterns/line.svg" alt="Horizontal line" class="hero__pattern hero__pattern--line">
-    <img src="/assets/patterns/right-arrow.svg" alt="Right pointing arrow" class="hero__pattern hero__pattern--arrow">
-    <img src="/assets/patterns/white-circles.svg" alt="3 white circles" class="hero__pattern hero__pattern--circles">
+    <button class="btn cta--redirect" onclick="window.location.href='#cta'">Get Scootin</button>
+    <img src="/assets/patterns/right-arrow.svg" alt="Right pointing arrow" class="hero__pattern--arrow">
   </div>
 
   <div class="steps">
     <div class="step">
       <img src="/assets/icons/locate.svg" alt="Mobile app usage illustration">
-      <h4>Locate with app</h4>
-      <p>
-        Use the app to find the nearest scooter to you. We are continuously placing scooters 
-        in the areas with most demand, so one should never be too far away.
-      </p>
+      <div class="step__inner">
+        <h4>Locate with app</h4>
+        <p>
+          Use the app to find the nearest scooter to you. We are continuously placing scooters 
+          in the areas with most demand, so one should never be too far away.
+        </p>
+      </div> 
     </div>
     <div class="step">
       <img src="/assets/icons/scooter.svg" alt="Scooter illustration">
-      <h4>Pick your scooter</h4>
-      <p>
-        We show the most important info for the scooters closest to you. So you know how much 
-        charge they have left and can see roughly how much it will cost.
-      </p>
+      <div class="step__inner">
+        <h4>Pick your scooter</h4>
+        <p>
+          We show the most important info for the scooters closest to you. So you know how much 
+          charge they have left and can see roughly how much it will cost.
+        </p>
+      </div>
     </div>
     <div class="step">
       <img src="/assets/icons/ride.svg" alt="Person enjoying Scoot illustration">
-      <h4>Enjoy the ride</h4>
-      <p>
-        Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, 
-        and you’re off! Always lock bikes away from walkways and accessibility ramps.
-      </p>
+      <div class="step__inner">
+        <h4>Enjoy the ride</h4>
+        <p>
+          Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, 
+          and you’re off! Always lock bikes away from walkways and accessibility ramps.
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="attributes">
-    <div class="attribute">
+    <div class="attribute attribute--home">
       <div class="img__container">
         <img src="/assets/images/telemetry.jpg" class="round" alt="Woman using Scoot mobile app">
       </div>
@@ -93,7 +95,7 @@
       </form>
       </div>
     </div>
-    <div class="attribute">
+    <div class="attribute attribute--home">
       <div class="img__container">
         <img src="/assets/images/near-you.jpg" class="round" alt="Major city downtown">
       </div>
@@ -109,7 +111,7 @@
         </form>
       </div>
     </div>
-    <div class="attribute">
+    <div class="attribute attribute--home">
       <div class="img__container">
         <img src="/assets/images/payments.jpg" class="round" alt="Person looking through wallet">
       </div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Scoot</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="navbar__mobile">
+      <img src="/assets/icons/hamburger.svg" class="hamburger" alt="Hamburger mobile nav toggle">
+      <img src="/assets/icons/close.svg" class="close" alt="X shape">
+    </a>
+    <a href="index.html" class="logo">
+      <img src="/assets/logo.svg" alt="Scoot company logo">
+    </a>
+    <div class="links__container"> <!-- This is the 3 links + the button -->
+      <ul class="navbar__links">
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="locations.html">Location</a>
+        </li>
+        <li>
+          <a href="careers.html">Careers</a>
+        </li>
+      </ul>
+      <button class="btn cta--redirect" onclick="window.location.href='#cta'">Get Scootin</button>
+    </div>
+  </nav>
+
+  <div class="overlay"></div>
+
+  <div class="banner banner--locations">
+    <h2>Locations</h2>
+  </div>
+
+  <div class="map">
+    <div class="img__container">
+      <img src="/assets/images/world-map-desktop.png" class="location__hero--desk" alt="World map">
+      <img src="/assets/images/world-map-mobile.png" class="location__hero--mobile" alt="World map">
+    </div>
+    <ul class="location__bubble">
+      <li class="location__bubble--ny">New York</li>
+      <li class="location__bubble--london">London</li>
+      <li class="location__bubble--yokohama">Yokohama</li>
+      <li class="location__bubble--jakarta">Jakarta</li>
+    </ul> 
+  </div>
+  
+  <div class="location__request">
+    <h2>Your city not listed?</h2>
+    <p>
+      If you’d like to see Scoot in your hometown, be sure to let us know. We track 
+      requests and plan launches based on demand. Feel free to message us by clicking 
+      the link or messaging us on social.
+    </p>
+    <form>
+      <button class="btn">Message Us</button>
+    </form>
+  </div>
+
+  <div class="cta" id="cta">
+    <h2>Sign up and Scoot off today</h2>
+    <div class="btn__container">
+      <form action="https://www.apple.com/ios/app-store/" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/app-store.svg" alt="Apple app store redirect link">
+        </button>
+      </form>
+      <form action="https://play.google.com/store?&utm_source=na_Med&utm_medium=hasem&utm_content=Jul0119&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-us-1000189-Med-hasem-py-Evergreen-Jul0119-Text_Search_BKWS-id_100740_%7cEXA%7cONSEM_kwid_43700045371544913&gclid=CjwKCAjwtqj2BRBYEiwAqfzur_9fpAcARXigtkcmByDZ9bHxoaw-1VsxHoaywdPUX54GnAkcvZY5nhoCAmAQAvD_BwE&gclsrc=aw.ds" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/google-play.svg" alt="Google play redirect link">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="/index.html">
+      <img src="/assets/logo-white.svg" alt="Scoot company logo">
+    </a>
+    <ul class="footer__links navbar__links">
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="locations.html">Location</a>
+      </li>
+      <li> 
+        <a href="careers.html">Careers</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <a href="#" aria-label="Friend Scoot on Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

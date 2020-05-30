@@ -1,0 +1,68 @@
+.attributes {
+
+    .attribute--careers {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(/assets/patterns/left-downward-arrow.svg);
+            background-position: right;
+            background-repeat: no-repeat;
+            top: 200px; bottom: 0; left: 0; right: -205px;
+            z-index: 2;
+        }
+
+        @include tablet-breakpoint {
+            &::before {
+                top: 0; right: -150px;
+            }
+        }
+
+        @include rwd(679) {
+            &::before {
+                right: -250px;
+            }
+        }
+
+        @include rwd(565) {
+            &::before {
+                right: -350px;
+            }
+        }
+
+        @include rwd(436) {
+            &::before {
+                top: -140px; right: -450px;
+            }
+        }
+    }
+}
+
+.jobs {
+    margin: 100px 0;
+
+    .job {
+        @include flex-btwn(row);
+        background-color: $light-gray;
+        margin-bottom: 15px;
+        padding: 20px 45px;
+
+        p { color: $dark-navy; }
+
+        &__desc { flex: 1 }
+
+        form { margin: auto 0 }
+    }
+
+    @include cellphone-breakpoint {
+        margin-bottom: 130px;
+
+        .job {
+            flex-direction: column;
+            text-align: center;
+
+            &__desc {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

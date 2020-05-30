@@ -1,9 +1,9 @@
 .hero {
     position: relative;
     background-image: url(/assets/images/home-hero-desktop.jpg);
-    background-size: cover; // Maybe contain?
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 650px;
+    height: max-content;
     padding: 140px 20vw;
 
     & > * { 
@@ -21,27 +21,91 @@
         margin: 50px 0;
     }
 
-    &__pattern {
+    &__pattern--arrow {
         position: absolute;
+        top: 50%; bottom: 0; left: calc(20vw + 455px); bottom: 0;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(/assets/patterns/line.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 50%; bottom: 0; left: 0; right: 0;
+        width: 17vw; height: 15px;
+    }
 
-        &--line {
-            transform: translateX(-20vw) translateY(-150px);
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        background-image: url(/assets/patterns/white-circles.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 68%;
+        transform: translateX(35px);
+
+        @include rwd(1013) { display: none }
+        @include tablet-breakpoint { display: flex }
+    }
+
+    @include rwd(1427) {
+        .hero__pattern--arrow {
+            top: 60%; left: calc(20vw + 200px);
+            z-index: 2;
         }
 
-        &--arrow {
-            transform: translateX(450px) translateY(-150px);
+        &::after {
+            background-position: 100% 80%;
+        }
+    }
+
+    @include tablet-breakpoint {
+        background-image: url(/assets/images/home-hero-tablet.jpg);
+        text-align: center;
+        padding: 100px 10vw 140px;
+
+        &::before {
+            background-image: url(/assets/patterns/right-arrow.svg);
+            height: auto; 
+            width: auto; max-width: 380px;
+            background-size: contain;
+            top: 73%; left: -15%;
         }
 
-        &--circles {
-            transform: translateX(1000px) translateY(-80px);
+        &::after {
+            background-position: 100% 92%;
         }
-    }   
+
+        & > * {
+            margin: 0 auto;
+            left: 0; right: 0;
+        }
+
+        p {  margin: 50px auto }
+
+        .hero__pattern--arrow { display: none }
+    }
+
+    @include cellphone-breakpoint {
+        background-image: url(/assets/images/home-hero-mobile.jpg);
+
+       &::before {
+           top: 0; bottom: 30px; right: 0; left: 0;
+           background-position: bottom left;
+           transform: translateX(-235px);
+       }
+       
+        &::after { display: none }
+    }
+
 }
 
 .steps {
     @include flex-btwn(row);
     position: relative;
-    margin: 100px 0 200px;
+    padding-top: 100px;
+    margin-bottom: 150px;
 
     &::before {
         content: '';
@@ -49,7 +113,7 @@
         background-color: $light-gray;
         width: 70%;
         height: 10px;
-        left: 0; top: 45px;
+        left: 0; top: 145px;
         z-index: -1;
     }
 
@@ -59,44 +123,50 @@
             margin: 15px 0;
         }
     }
+
+    @include tablet-breakpoint {
+        @include flex-btwn(column);
+        margin-bottom: 120px;
+
+        &::before {
+            width: 10px;
+            height: 88%;
+            top: 0; left: calc(5vw + 43px);
+        }
+
+        .step { 
+            display: flex;
+            align-items: center;
+            width: 100%; 
+            margin-bottom: 30px;
+
+            &__inner {
+                margin-left: 75px;
+            }
+        }
+    }
+
+    @include cellphone-breakpoint {
+        &::before { display: none; }
+
+        .step {
+            flex-direction: column;
+            margin-bottom: 70px;
+
+            &__inner { 
+                margin-left: 0; 
+                text-align: center;
+
+                h4 { margin: 20px 0 30px }
+            }
+        }
+    }
+
 }
 
 .attributes {
-    margin: 100px 0;
-
-    .attribute {
-        @include flex-btwn(row);
-        position: relative;
-        margin-bottom: 75px;
-
-        &::after { // These are the circles for each attribute div
-            content: '';
-            position: absolute;
-            background-image: url(/assets/patterns/circle.svg);
-            background-repeat: no-repeat;
-        }
-
-        .img__container {
-            img {
-                max-width: 100%;
-            }
-        }
-
-        & > * {
-            width: 45%;
-            p {
-                margin: 20px 0;
-            }            
-        }
-
-        &:nth-last-of-type(odd) {
-            @include flex-btwn(row-reverse);
-
-            img {
-                display: block;
-                margin-left: auto;
-                transform: translateX(-50px);
-            }
+   .attribute--home { 
+        &:nth-of-type(odd) {
 
             &::before { // Arrow
                 content: '';
@@ -107,50 +177,52 @@
                 top: 0; bottom: 0; left: 0; right: 0;
                 z-index: 2;
             }
-
-            &::after { // Circle
-                top: 0; bottom: 0; left: 0; right: -420px;
-                background-position: center right;
-            }
         }
 
         &:nth-of-type(1) { // Arrow for first(odd) attribute
             &::before {
-                transform: translateX(205px) translateY(120px);
+                right: -205px; bottom: -250px;
             }
         }
 
         &:nth-of-type(3) { // Arrow for third(odd) attribute
             &::before {
-                transform: translateX(550px) translateY(-100px);
+                right: -550px; top: -150px;
             }
         }
 
-        &:nth-of-type(2) {
-
-            img {
-                transform: translateX(50px);
-            }
-
-            &::before { // Arrow
-                content: '';
-                position: absolute;
-                background-image: url(/assets/patterns/right-arrow.svg);
-                background-position: top left;
-                background-repeat: no-repeat;
-                top: 0; bottom: 0; left: 0; right: 0;
-                transform: translateX(-205px);
-                z-index: 2;
+        @include tablet-breakpoint {
+            &:nth-of-type(1)::before {
+                bottom: -70px;
             }
             
-            &::after { // Circle
-                top: 0; bottom: 0; right: 0; left: -420px;
-                background-position: center left;
-            } 
+            &:nth-of-type(3)::before {
+                top: -450px; right: -400px;
+            }   
         }
 
-        &__text {
-            margin: auto 0;
+        @include rwd(616) {
+            &:nth-of-type(1)::before {
+                right: -250px;
+            }  
         }
-    } 
+
+        @include cellphone-breakpoint {
+            &:nth-of-type(1)::before {
+                top: -100px; right: -330px;
+            }
+        }
+
+        @include rwd(456) {
+            &:nth-of-type(1)::before {
+                top: -150px; right: -450px;
+            }
+        }
+
+        @include rwd(350) {
+            &:nth-of-type(1)::before {
+                top: -250px;
+            }
+        }
+    }
 }

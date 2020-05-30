@@ -1,0 +1,124 @@
+.banner--about {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        background-image: url(/assets/images/about-hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.attributes {
+
+    .attribute:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .attribute--about:nth-of-type(odd) { // Arrow
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(/assets/patterns/left-upward-arrow.svg);
+            background-position: right;
+            background-repeat: no-repeat;
+            top: 0; bottom: -250px; left: 0; right: -205px;
+            z-index: 2;
+        }
+
+        @include tablet-breakpoint {
+            &::before {
+                top: 30px; bottom: 0;
+            }
+        }
+
+        @include rwd(616) {
+            &::before {
+                right: -250px;
+            }
+        }
+
+        @include cellphone-breakpoint {
+            &::before {
+               top: 0px; right: -380px;
+            }
+        }
+
+        @include rwd(405) {
+            &::before {
+                top: -85px; right: -450px;
+            }
+        }
+    }
+}
+
+.faq {
+    margin: 100px 0;
+    h2 { text-align: center }
+
+    &__section__container {
+        @include flex-btwn(row);
+        margin-top: 50px;
+
+        h3 { flex: 0 0 35% }
+
+        .accordion {
+            flex: 1;
+
+            &__item {
+                & > * { cursor: pointer }
+
+                margin-bottom: 15px;
+                padding: 15px 20px;
+                background-color: $light-gray;
+                cursor: pointer;
+                &:hover {
+                    background-color: $light-yellow;
+                }
+            }
+        }
+    }
+
+    &__question {
+        @include flex-btwn(row);
+        background-color: transparent;
+        text-align: left;
+        align-items: center;
+        width: 100%;
+        border: 0;
+
+        span {
+            color: $yellow;
+            font-size: 25px;
+            transition: .3s ease-in-out;
+
+            &.active {
+                transform: rotateZ(180deg);
+            }
+        }
+    }
+
+    &__answer {
+        color: $dark-navy;
+        max-height: 0;
+        overflow: hidden;
+        transition: .5s;
+
+        &.active { 
+            margin: 10px 0;
+        }
+    }
+
+    @include tablet-breakpoint {
+        .faq__section__container {
+            @include flex-btwn(column);
+
+            h3 { 
+                text-align: center; 
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}

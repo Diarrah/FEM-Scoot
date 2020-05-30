@@ -1,0 +1,156 @@
+.map {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    max-width: calc(1110px + 16vw);
+
+    .img__container {
+        width: max-content;
+        .location__hero--mobile { display: none; }
+    }
+
+    .location__bubble {
+        position: absolute;
+        display: flex;
+        top: 0; left: 8vw;    
+        height: 100%; 
+        width: calc(100% - 16vw);
+        max-width: 1110px;
+        
+        li {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px; width: 180px;
+            background-color: $yellow;
+            @include location-bubble;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: $yellow;
+                height: 20px; width: 20px;
+                top: 100%; left: 50%;
+                transform: rotateZ(45deg) translateY(-15px);
+            }
+        }
+
+        &--ny { top: 14%; left: 12%; }
+        &--london { top: 5%; left: 34%; }
+        &--yokohama { top: 16%; right: 7.5%; }
+        &--jakarta { top: 47%; right: 15%; }
+
+        @include rwd(1265) {
+            &--ny { left: 10.5%; }
+        }
+
+        @include rwd(1200) {
+            &--ny { top: 13%; left: 10%; }
+            &--london { top: 4%; left: 33%; }
+            &--yokohama { top: 15%; right: 7%; }
+            &--jakarta { top: 46%; right: 14%; }
+        }
+
+        @include rwd(1100) {
+            &--ny { top: 11%; left: 8.5%; }
+            &--london { top: 2%; left: 32%; }
+            &--yokohama { top: 13.5%; right: 6%; }
+            &--jakarta { top: 44%; right: 13.5%; }
+        }
+
+        @include rwd(978) {
+            li {
+                height: 40px; width: 140px;
+                font-size: 16px;
+            }
+
+            &--ny { top: 15%; left: 8%; }
+            &--london { top: 6%; left: 32%; }
+            &--yokohama { top: 17%; right: 6%; }
+            &--jakarta { top: 48%; right: 13%; }
+        }
+
+        @include rwd(875) {
+            &--ny { left: 6%; }
+            &--london { top: 4%; left: 31%; }
+            &--yokohama { top: 15%; right: 4%; }
+            &--jakarta { top: 46%; }
+        }
+
+        @include rwd(809) {
+            &--ny { top: 13%; left: 5%; }
+            &--london { top: 3%; left: 29.5%; }
+            &--yokohama { top: 15%; right: 4%; }
+            &--jakarta { top: 44.5%; right: 12%; }
+        }
+
+    }
+
+    @include rwd(736) {
+        flex-direction: column;
+
+        .img__container { 
+            width: auto;
+
+            .location__hero {
+                &--desk { display: none }
+                &--mobile { display: block }
+            }
+        }
+
+        .location__bubble {
+            position: relative;
+            flex-direction: column;
+            height: max-content;
+            margin-top: 40px;
+
+            & > * { 
+                left: auto; 
+                right: auto; 
+            }
+
+            li { 
+                position: relative;
+                background-color: $light-yellow;
+                width: 100%; height: 80px;
+                font-size: 22px;
+                margin-bottom: 20px;
+                &:last-of-type  { margin-bottom: 0 }
+
+                &::after { display: none }
+
+                @include rwd(412) {
+                    height: 65px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.location__request {
+    display: grid;
+    grid-template-columns: minmax(292px, 1.5fr) 2fr min-content;
+    grid-template-rows: 1fr 100px;
+    grid-column-gap: 50px;
+    align-items: center;
+    padding-top: 100px;
+
+    p {
+        margin-bottom: auto;
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    @include rwd(978) {
+       @include flex-btwn(column);
+       margin-bottom: 70px;
+
+       & > * { 
+           text-align: center; 
+        }
+
+       p { margin: 40px 0 }
+    }
+
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Scoot About</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="navbar__mobile">
+      <img src="/assets/icons/hamburger.svg" class="hamburger" alt="Hamburger mobile nav toggle">
+      <img src="/assets/icons/close.svg" class="close" alt="X shape">
+    </a>
+    <a href="index.html" class="logo">
+      <img src="/assets/logo.svg" alt="Scoot company logo">
+    </a>
+    <div class="links__container"> <!-- This is the 3 links + the button -->
+      <ul class="navbar__links">
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="locations.html">Location</a>
+        </li>
+        <li>
+          <a href="careers.html">Careers</a>
+        </li>
+      </ul>
+      <button class="btn cta--redirect" onclick="window.location.href='#cta'">Get Scootin</button>
+    </div>
+  </nav>
+
+  <div class="overlay"></div>
+
+  <div class="banner banner--about">
+    <h2>About</h2>
+  </div>
+
+  <div class="attributes">
+    <div class="attribute attribute--about">
+      <div class="img__container">
+        <img src="/assets/images/digital-era.jpg" class="round" alt="Woman using Scoot mobile app">
+      </div>
+      <div class="attribute__text">
+        <h2>Mobility for the digital era</h2>
+        <p>
+          Getting around should be simple (and even fun!) for everyone. We embrace technology to 
+          provide low cost, smart access to scooters at your fingertips.
+        </p>
+      </div>
+    </div>
+    <div class="attribute attribute--about">
+      <div class="img__container">
+        <img src="/assets/images/better-living.jpg" class="round" alt="Trolley in an urban city">
+      </div>
+      <div class="attribute__text">
+        <h2>Better urban living</h2>
+        <p>
+          We’re helping connect cities and bring people closer together. Our scooters are also 
+          fully-electric and we offset the minimal carbon footprint for each ride.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="values">
+    <h2>Our values</h2>
+    <div class="values__container">
+      <div class="value">
+        <div class="img__container">
+          <img src="/assets/images/our-tech.jpg" class="round" alt="Person using Scoot mobile app">
+          <span class="number">01</span>
+        </div>
+        <div class="value__text">
+          <h4>Our tech</h4>
+          <p>
+            We’re using cutting edge technology to drive accessible urban transportation forward. 
+            Our fully electric scooters are a joy to ride!
+          </p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="img__container">  
+          <img src="/assets/images/our-integrity.jpg" class="round" alt="Person on a vespa">
+          <span class="number">02</span>
+        </div>
+        <div class="value__text">
+          <h4>Our integrity</h4>
+          <p>
+            We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
+            in every city we serve.
+          </p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="img__container">
+          <img src="/assets/images/our-community.jpg" class="round" alt="Group of people walking downtown">
+          <span class="number">03</span>
+        </div>
+        <div class="value__text">
+          <h4>Our community</h4>
+          <p>
+            We support every community we serve. All workers are paid a living wage based on their 
+            location and are Scoot employees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="faq">
+    <h2>FAQs</h2>
+      <div class="faq__section__container">
+        <h3>How it works</h3>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4>How do I download the app?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. 
+              An even simpler way to do it would be to click the relevant link at the bottom of this 
+              page and you’ll be re-directed to the correct page.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4>Can I find a nearby Scoots?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              Definitely! Simply open up the app and allow us to find your location while using it. We'll 
+              show you all of the closest Scoots and some extra useful information. 
+            </p>
+          </div>
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4>Do I need a license to ride?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              Yup! We provide information inside the app regarding local laws and the license you need to be 
+              able to ride our Scoots.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="faq__section__container">
+        <h3>Safe driving</h3>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4> Should I wear a helmet?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              Yes, please do! All cities have different laws. But we strongly strongly strongly recommend 
+              always wearing a helmet regardless of the local laws. We like you and we want you to be as 
+              safe as possible while Scooting.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4>How about the rules & regulations?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              Now is not the time to be a rule breaker. Be sure you're complying with all local laws and 
+              regulations. Also, just be a good human being. Be sure not to park your Scoot where it can 
+              block access to buildings or get in people's way.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <button class="faq__question">
+              <h4>What if I damage my Scoot?</h4>
+              <span>
+                <img src="/assets/icons/chevron.svg" alt="Carrot facing up">
+              </span>
+            </button>
+            <p class="faq__answer">
+              Be sure to read our terms and conditions carefully. Not the most fun job we know but we make 
+              it as clear as possible. There's an option to add insurance for each trip, or you can sign 
+              up for annual insurance if you're a regular Scooter.
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="cta" id="cta">
+    <h2>Sign up and Scoot off today</h2>
+    <div class="btn__container">
+      <form action="https://www.apple.com/ios/app-store/" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/app-store.svg" alt="Apple app store redirect link">
+        </button>
+      </form>
+      <form action="https://play.google.com/store?&utm_source=na_Med&utm_medium=hasem&utm_content=Jul0119&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-us-1000189-Med-hasem-py-Evergreen-Jul0119-Text_Search_BKWS-id_100740_%7cEXA%7cONSEM_kwid_43700045371544913&gclid=CjwKCAjwtqj2BRBYEiwAqfzur_9fpAcARXigtkcmByDZ9bHxoaw-1VsxHoaywdPUX54GnAkcvZY5nhoCAmAQAvD_BwE&gclsrc=aw.ds" target="_blank">
+        <button type="submit">
+          <img src="/assets/icons/google-play.svg" alt="Google play redirect link">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="/index.html">
+      <img src="/assets/logo-white.svg" alt="Scoot company logo">
+    </a>
+    <ul class="footer__links navbar__links">
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="locations.html">Location</a>
+      </li>
+      <li> 
+        <a href="careers.html">Careers</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <a href="#" aria-label="Friend Scoot on Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Follow Scoot on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

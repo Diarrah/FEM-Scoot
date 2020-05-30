@@ -11,11 +11,26 @@ html {
     line-height: 1.667;
 }
 
+@mixin location-bubble {
+    font-size: 22px;
+    font-family: 'Mono Space', monospace;
+    color: $dark-navy;
+    font-weight: 700;
+}
+
 h1 {
     font-size: 3.5em;
     line-height: 1;
     font-family: 'Mono Space', monospace;
     color: hsl(0, 0%, 100%);
+
+    @include tablet-breakpoint {
+        font-size: 3em;
+    }
+
+    @include cellphone-breakpoint {
+        font-size: 2.7em;
+    }
 }
 
 h2, 
@@ -28,21 +43,37 @@ h4 {
 h2 {
     font-size: 3em;
     line-height: 1;
+    
+    @include cellphone-breakpoint {
+        font-size: 2.7em;
+    }
 }
 
 h3 {
     font-size: 2.5em;
     line-height: 1.2;
+
+    @include cellphone-breakpoint {
+        font-size: 2.2em;
+    }
 }
 
 h4 {
     font-size: 1.5em;
     line-height: 1.167;
+
+    @include cellphone-breakpoint {
+        font-size: 1.25em;
+    }
 }
 
 p { 
     color: $dim-gray;
     @include medium-font();
+
+    @include cellphone-breakpoint {
+        font-size: 0.9em;
+    }
 }
 
 ul {
@@ -56,5 +87,6 @@ a {
 
 button {
     font-family: inherit;
+    font-family: 'Mono Space', monospace;
     @include medium-font();
 }

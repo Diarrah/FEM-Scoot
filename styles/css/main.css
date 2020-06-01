@@ -37,7 +37,7 @@ html {
 h1 {
   font-size: 3.5em;
   line-height: 1;
-  font-family: 'Mono Space', monospace;
+  font-family: 'Space Mono', monospace;
   color: white;
 }
 
@@ -56,7 +56,7 @@ h1 {
 h2,
 h3,
 h4 {
-  font-family: 'Mono Space', monospace;
+  font-family: 'Space Mono', monospace;
   color: #4a5668;
 }
 
@@ -662,7 +662,7 @@ button {
 }
 
 .cta h2 {
-  max-width: 415px;
+  max-width: 450px;
 }
 
 .cta h2.flash {
@@ -693,6 +693,12 @@ button {
   }
   100% {
     color: #fcb72c;
+  }
+}
+
+@media (max-width: 914px) {
+  .cta h2 {
+    font-size: 2.7em;
   }
 }
 
@@ -839,7 +845,7 @@ button {
 
 .hero > * {
   color: white;
-  max-width: 500px;
+  max-width: 515px;
 }
 
 .hero h1 {
@@ -1326,7 +1332,7 @@ button {
   width: 180px;
   background-color: #fcb72c;
   font-size: 22px;
-  font-family: 'Mono Space', monospace;
+  font-family: 'Space Mono', monospace;
   color: #4a5668;
   font-weight: 700;
 }

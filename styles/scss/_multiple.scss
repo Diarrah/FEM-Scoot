@@ -405,7 +405,7 @@
     }
 
     h2 { 
-        max-width: 415px; 
+        max-width: 450px; 
         &.flash {
             animation: flash 500ms;
             animation-delay: 100ms;
@@ -416,6 +416,9 @@
                 100% { color: $yellow }
             }
         }
+        
+        @include rwd(914) { font-size: 2.7em }
+
     }
 
     .btn__container {
